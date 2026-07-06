@@ -31,7 +31,7 @@
   .pill {
     background: #1a1d22; color: #e8eaed;
     border: 2px solid #2a2f36;
-    padding: 12px 18px; border-radius: 999px;
+    padding: 12px 18px; border-radius: 0;
     font-size: 16px; font-weight: 500;
     cursor: pointer; user-select: none;
     transition: all 0.15s;
@@ -167,15 +167,37 @@
 
   
   #setup h2 {
-    border-top: 1px solid #2a2f36;
-    padding-top: 20px;
-    margin-top: 24px;
+    border-top: 2px solid #5a8aff;
+    padding-top: 24px;
+    margin-top: 28px;
   }
   #setup > h1 + h2 {
     border-top: none;
     padding-top: 0;
     margin-top: 16px;
   }
+  #setup h2 {
+    background: #1a2540;
+    color: #cfe0ff;
+    padding: 12px 14px;
+    border-left: 4px solid #5a8aff;
+    border-top: none;
+    margin-top: 28px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  #setup h2::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #5a8aff;
+    margin: -12px -14px 12px;
+  }
+  #setup > h1 + h2 {
+    margin-top: 20px;
+  }
+  #setup > h1 + h2::before { display: none; }
   </style>
 </head>
 <body>
